@@ -53,12 +53,15 @@ No terminal, dentro da pasta testeDev, execute:
 mvn clean install
 ```
 
+---
+
 📌 3️⃣ Iniciar o Servidor
 ```
 mvn spring-boot:run
 ```
 ✅ O backend estará disponível em http://localhost:8080.
 
+---
 
 📌 4️⃣ Testar API no Swagger
 
@@ -74,7 +77,7 @@ Exemplo de Requisição (POST):
 ```
 {
   "username": "admin",
-  "password": "123"
+  "password": "password"
 }
 ```
 Resposta (Token JWT):
@@ -89,23 +92,26 @@ Todas as requisições autenticadas devem incluir o token JWT no Header:
 Authorization: Bearer <token_aqui>
 ```
 
-📌 Endpoints Principais
-```
-Método	Rota						Descrição
-POST	/auth/login					Autenticação (JWT)
-GET		/categorias					Lista todas as categorias
-POST	/categorias					Cadastra uma nova categoria
-DELETE	/categorias/{id}			Deleta uma categoria
-GET		/produtos					Lista todos os produtos
-POST	/produtos/categoria/{id}	Cadastra um produto em categoria
-```
+---
 
+📌 Endpoints Principais
+
+| Método | Rota                      | Descrição                              |
+|--------|---------------------------|----------------------------------------|
+| POST   | `/auth/login`             | Autenticação do usuário (JWT).         |
+| GET    | `/categorias`             | Lista todas as categorias.             |
+| POST   | `/categorias`             | Cadastra uma nova categoria.           |
+| DELETE | `/categorias/{id}`        | Deleta uma categoria específica pelo ID.|
+| GET    | `/produtos`               | Lista todos os produtos.               |
+| POST   | `/produtos/categoria/{id}`| Cadastra um produto em uma categoria específica pelo ID. |
+
+---
 📌 Testes Unitários
 Para rodar os testes unitários:
 ```
 mvn test
 ```
-
+---
 📌 Estrutura do Projeto
 ```
 /testeDev
