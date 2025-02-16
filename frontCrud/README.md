@@ -29,21 +29,42 @@ ng serve --open
 
 ✅ O frontend estará disponível em http://localhost:4200.
 
+---
+
 ## 📌 3️⃣  🔑 Login no Sistema
 Usuário: admin
 Senha: password
 O login gera um token JWT, que é salvo no localStorage e enviado nas requisições autenticadas.
 
+---
+
 ## 📌 4️⃣  Endpoints Utilizados
-Método	Rota	Descrição
-POST	/auth/login	Autenticação (JWT)
-GET		/categorias	Lista todas as categorias
-POST	/categorias	Cadastra uma nova categoria
-DELETE	/categorias/{id}	Deleta uma categoria
-GET		/produtos	Lista todos os produtos
-POST	/produtos/categoria/{id}	Cadastra um produto em categoria
+- **POST** `/auth/login`
+  - **Descrição**: Autenticação do usuário (JWT).
+
+### Categorias
+
+- **GET** `/categorias`
+  - **Descrição**: Lista todas as categorias.
+
+- **POST** `/categorias`
+  - **Descrição**: Cadastra uma nova categoria.
+
+- **DELETE** `/categorias/{id}`
+  - **Descrição**: Deleta uma categoria específica pelo ID.
+
+### Produtos
+
+- **GET** `/produtos`
+  - **Descrição**: Lista todos os produtos.
+
+- **POST** `/produtos/categoria/{id}`
+  - **Descrição**: Cadastra um produto em uma categoria específica pelo ID.
+
+---
 
 ## 📌 5️⃣  Estrutura do Projeto
+```
 /frontCrud
 │── /src
 │   ├── /app
@@ -55,3 +76,4 @@ POST	/produtos/categoria/{id}	Cadastra um produto em categoria
 │── angular.json                # Configuração do Angular CLI
 │── package.json                # Dependências do projeto
 │── README.md                   # Documentação do frontend
+```
