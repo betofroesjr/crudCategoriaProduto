@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Categorias</h2>
+  
+    <div class="input-group mb-3">
+      <input [(ngModel)]="novaCategoria" class="form-control" placeholder="Nova Categoria">
+      <button class="btn btn-success" (click)="adicionarCategoria()">Adicionar</button>
+    </div>
+  
+    <ul class="list-group">
+      <li *ngFor="let categoria of categorias" class="list-group-item d-flex justify-content-between align-items-center">
+        {{ categoria.nome }}
+        <button class="btn btn-danger btn-sm" (click)="excluirCategoria(categoria.id)">Excluir</button>
+      </li>
+    </ul>
+  </div>
