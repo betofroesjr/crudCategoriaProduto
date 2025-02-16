@@ -1,59 +1,57 @@
-# FrontCrud
+# 🎨 Frontend - CRUD de Categorias e Produtos (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+Este é o frontend do projeto **CRUD de Categorias e Produtos**, desenvolvido em **Angular** e integrado com um backend em **Spring Boot**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias Utilizadas
+- **Angular 19+**
+- **TypeScript**
+- **Bootstrap**
+- **RxJS**
+- **Angular Router**
+- **Angular Forms**
+- **HttpClient**
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📌 1️⃣ Instalar Dependências
+No terminal, dentro da pasta **`frontCrud`**, execute:
 
-## Code scaffolding
+npm install
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 📌 2️⃣ Iniciar o Servidor Angular
+Para rodar o frontend:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+ng serve --open
 
-```bash
-ng generate --help
-```
+✅ O frontend estará disponível em http://localhost:4200.
 
-## Building
+## 📌 3️⃣  🔑 Login no Sistema
+Usuário: admin
+Senha: password
+O login gera um token JWT, que é salvo no localStorage e enviado nas requisições autenticadas.
 
-To build the project run:
+## 📌 4️⃣  Endpoints Utilizados
+Método	Rota	Descrição
+POST	/auth/login	Autenticação (JWT)
+GET		/categorias	Lista todas as categorias
+POST	/categorias	Cadastra uma nova categoria
+DELETE	/categorias/{id}	Deleta uma categoria
+GET		/produtos	Lista todos os produtos
+POST	/produtos/categoria/{id}	Cadastra um produto em categoria
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📌 5️⃣  Estrutura do Projeto
+/frontCrud
+│── /src
+│   ├── /app
+│   │   ├── /components        # Componentes do projeto (Login, Listagem, etc)
+│   │   ├── /services          # Serviços HTTP para comunicação com backend
+│   │   ├── app.routes.ts      # Configuração de Rotas
+│   │   ├── app.config.ts      # Configurações Globais
+│   ├── index.html              # Página principal
+│── angular.json                # Configuração do Angular CLI
+│── package.json                # Dependências do projeto
+│── README.md                   # Documentação do frontend
